@@ -15,8 +15,7 @@
   --fw-semi-bold: 600;
   --fw-bold: 700;
 
-  --box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  --box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 36px 0px;
 }
 
 /* Box sizing rules */
@@ -191,6 +190,7 @@ utility class
 }
 
 .button[data-type="white"] {
+  background-color: #fff;
   color: var(--clr-neutral-900);
   padding-inline: 1.75rem;
 }
@@ -206,6 +206,8 @@ Header section
 ************************************************************************************ */
 .header {
   background-image: url("../images/bg-hero-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: var(--clr-neutral-100);
 }
 
@@ -250,5 +252,67 @@ Header section
 
   .hero__body {
     justify-items: start;
+  }
+}
+
+/* ***********************************************************************************
+Features section
+************************************************************************************ */
+.features {
+  margin-top: 4.375rem;
+  margin-inline: auto;
+}
+
+.features > * + * {
+  margin-top: 2.625rem;
+}
+
+.feature-card {
+  display: grid;
+  gap: 2.625rem;
+
+  max-width: 75rem;
+  text-align: center;
+  padding: 2.625rem;
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+}
+
+.feature-card__img img {
+  width: 25rem;
+  margin-inline: auto;
+}
+
+.feature-card__title {
+  font-size: 1.5rem;
+  font-weight: var(--fw-bold);
+
+  margin-bottom: 1.625rem;
+}
+
+.feature-card__desc {
+  color: var(--clr-neutral-400);
+}
+
+@media (min-width: 48.75rem) {
+  .feature-card {
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    text-align: start;
+    padding: 3.25rem;
+  }
+
+  .feature-card:nth-child(2n + 1) .feature-card__img {
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+  }
+  .feature-card:nth-child(2n + 1) .feature-card__body {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .feature-card__img img {
+    margin-inline: 0;
   }
 }
