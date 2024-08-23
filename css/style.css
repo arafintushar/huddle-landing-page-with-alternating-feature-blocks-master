@@ -312,6 +312,10 @@ Features section
     grid-row: 1 / 2;
   }
 
+  .feature-card__title {
+    font-size: 2rem;
+  }
+
   .feature-card__img img {
     margin-inline: 0;
   }
