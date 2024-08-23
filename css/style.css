@@ -100,7 +100,7 @@ select {
 utility class
 ************************************************************************************ */
 .content-grid {
-  --padding-inline: 1rem;
+  --padding-inline: 2rem;
   --content-full-width: 90rem;
 
   display: grid;
@@ -259,7 +259,7 @@ Header section
 Features section
 ************************************************************************************ */
 .features {
-  margin-top: 4.375rem;
+  margin-block: 4.375rem;
   margin-inline: auto;
 }
 
@@ -329,12 +329,110 @@ cta section
   gap: 2rem;
   justify-items: center;
 
+  background-color: #fff;
+  z-index: 999;
+
   width: min(100%, 50rem);
   margin-inline: auto;
-  margin-block: 4.75rem 0rem;
+  margin-bottom: -7.21875rem;
 
   padding: 3rem 1rem;
   text-align: center;
   box-shadow: var(--box-shadow);
   border-radius: 1rem;
+}
+
+/* ***********************************************************************************
+footer section
+************************************************************************************ */
+.footer {
+  background-color: var(--clr-neutral-900);
+  color: #fff;
+
+  padding-block: 10rem 2rem;
+}
+
+.footer > * + * {
+  margin-top: 3rem;
+}
+
+.footer-body {
+  display: grid;
+  gap: 2rem;
+}
+
+.footer-body .contact-info > * + * {
+  margin-top: 1rem;
+}
+
+.footer-body .contact-info > * {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.secondary-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.secondary-nav ul a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.secondary-nav ul a:is(:hover, :focus) {
+  text-decoration: underline;
+}
+.footer-body .social-link {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer-body .social-link a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+
+  color: #fff;
+  border-radius: 100%;
+  border: 0.0625rem solid #fff;
+
+  width: 2rem;
+  height: 2rem;
+
+  transition: all 250ms ease-in-out;
+}
+
+.footer-body .social-link a:is(:hover, :focus) {
+  border-color: var(--clr-primary-400);
+  color: var(--clr-primary-400);
+}
+
+.copy-right {
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+@media (min-width: 48.75rem) {
+  .footer-body {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-body .contact-info > * {
+    align-items: start;
+  }
+
+  .secondary-nav ul {
+    grid-template-columns: 1fr 1fr;
+  }
+  .copy-right {
+    text-align: end;
+  }
 }
