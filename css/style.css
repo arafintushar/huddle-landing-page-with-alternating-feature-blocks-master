@@ -4,7 +4,8 @@
 :root {
   --clr-primary-400: hsl(322, 100%, 66%);
 
-  --clr-neutral-100: hsl(193, 100%, 96%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-200: hsl(193, 100%, 96%);
   --clr-neutral-400: hsl(208, 11%, 55%);
   --clr-neutral-900: hsl(192, 100%, 9%);
 
@@ -131,7 +132,7 @@ utility class
 }
 
 .clr-neutral-100 {
-  color: var(--clr-neutral-100);
+  color: var(--clr-neutral-200);
 }
 
 .hero__title {
@@ -190,14 +191,14 @@ utility class
 }
 
 .button[data-type="white"] {
-  background-color: #fff;
+  background-color: var(--clr-neutral-100);
   color: var(--clr-neutral-900);
   padding-inline: 1.75rem;
 }
 
 .button[data-type="pink"] {
   background-color: var(--clr-primary-400);
-  color: #fff;
+  color: var(--clr-neutral-100);
   padding-inline: 4.375rem;
 }
 
@@ -208,7 +209,7 @@ Header section
   background-image: url("../images/bg-hero-mobile.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-200);
 }
 
 .primary-nav {
@@ -329,7 +330,7 @@ cta section
   gap: 2rem;
   justify-items: center;
 
-  background-color: #fff;
+  background-color: var(--clr-neutral-100);
   z-index: 999;
 
   width: min(100%, 50rem);
@@ -347,7 +348,7 @@ footer section
 ************************************************************************************ */
 .footer {
   background-color: var(--clr-neutral-900);
-  color: #fff;
+  color: var(--clr-neutral-100);
 
   padding-block: 10rem 2rem;
 }
@@ -381,7 +382,7 @@ footer section
 
 .secondary-nav ul a {
   text-decoration: none;
-  color: #fff;
+  color: var(--clr-neutral-100);
 }
 
 .secondary-nav ul a:is(:hover, :focus) {
@@ -400,9 +401,9 @@ footer section
 
   text-decoration: none;
 
-  color: #fff;
+  color: var(--clr-neutral-100);
   border-radius: 100%;
-  border: 0.0625rem solid #fff;
+  border: 0.0625rem solid var(--clr-neutral-100);
 
   width: 2rem;
   height: 2rem;
