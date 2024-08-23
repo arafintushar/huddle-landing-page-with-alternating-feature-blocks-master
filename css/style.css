@@ -320,3 +320,21 @@ Features section
     margin-inline: 0;
   }
 }
+
+/* ***********************************************************************************
+cta section
+************************************************************************************ */
+.cta {
+  display: grid;
+  gap: 2rem;
+  justify-items: center;
+
+  width: min(100%, 50rem);
+  margin-inline: auto;
+  margin-block: 4.75rem 0rem;
+
+  padding: 3rem 1rem;
+  text-align: center;
+  box-shadow: var(--box-shadow);
+  border-radius: 1rem;
+}
